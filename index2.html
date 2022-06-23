@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <!-- Control absoluto de Vue sobre este div -->
+    <div id="myApp">
+        <h1> Hola Mundo2 desde Vue.js </h1>
+        <p>Expresion JS</p>
+        <p>{{1+1}}</p>
+
+        <h2> Arreglo </h2>
+        <p>{{[1,2,3,4,5]}}</p>
+
+        <p>Objeto</p>
+        <p>{{ {nombre:"Roberth", apellido:"Troya"} }}</p>
+        
+        <p>Funcion ternaria</p>
+        <p>{{1+1==3 ? 'Activo' : 'Inactivo'}}</p>
+
+        <h3>{{mensaje}}</h3>
+        <p>{{mensaje2}}</p>
+    </div>
+
+    <script src="./app2.js"></script>
+    
+</body>
+</html>
