@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesor</title>
+    <link rel="stylesheet" href="../css/profesor.css">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+
+    <div id="myApp">
+        <h3>Lista de profesores:</h3>
+
+        <form action="">
+            <table>
+                <tr>
+                    <td class="titleTable">Nombre</td>
+                    <td class="titleTable">Apellido</td>
+                    <td class="titleTable">Edad</td>
+                    <td class="titleTable">Direccion</td>
+                    <td class="titleTable">Correo</td>
+                </tr>
+                <tr v-for="{nombre, apellido, edad, direccion, correo} in lista">
+                    <td>{{nombre}}</td>
+                    <td>{{apellido}}</td>
+                    <td>{{edad}}</td>
+                    <td>{{direccion}}</td>
+                    <td>{{correo}}</td>
+                </tr>
+            </table>
+        </form>
+        <button v-on:click="agregaProfesor"> Agrega Profesor</button>
+
+    </div>
+    <script src="../js/profesor.js"></script>
+</body>
+</html>
