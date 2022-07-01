@@ -52,10 +52,20 @@
 
         <h2>Reporte Final</h2>
         <ul>
-            <li v-for="{nombre, apellido, edad} in lista">
-                <h3>{{nombre}} - {{apellido}} - {{edad}}</h3>
+            <li v-for="(item, index) in lista">
+                <h3>{{index + 1}}: {{item.nombre}} - {{item.apellido}} - {{item.edad}}</h3>
+                <hr>
             </li>
         </ul>
+
+        <h2>Reporte Final 2</h2>
+        <ul>
+            <li v-for="({nombre, apellido, edad}, index) in lista">
+                <h3>{{index + 1}}: {{nombre}} - {{apellido}} - {{edad}}</h3>
+                <hr>
+            </li>
+        </ul>
+
         <button v-on:click="agregaEstudiante"> Agregar Estudiante </button>
 
     </div>

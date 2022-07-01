@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiante Final</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+        label {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="myApp">
+        
+        <h2> Ingreso Estudiantes </h2>
+        <label for="">Nombre</label>
+        <input type="text" v-model="mensaje" v-on:keypress.enter="agregaEstudiante">
+
+        <label for="">Apellido</label>
+        <input type="text" v-model="apellido" v-on:keypress.enter="agregaEstudiante">
+        
+        <label for="">Edad</label>
+        <input type="text" v-model="edad" v-on:keypress.enter="agregaEstudiante">
+        <br>
+        <br>
+        <button v-on:click="agregaEstudiante('I')"> Agregar Inicio </button>
+        <button v-on:click="agregaEstudiante('F')"> Agregar Fin </button>
+
+        <p>{{mensaje}}</p>
+        <ul>
+            <li v-for="({nombre, apellido, edad}, index) in lista">
+                <!-- v-if comprueba si se renderiza o no un componente; false:no construye el elemento -->
+                <!-- v-show renderiza pero no muestra el componente -->
+                
+                <p v-if="true">{{index + 1}}: {{nombre}} - {{apellido}} - {{edad}}</p v-if="">
+                
+            </li>
+        </ul>
+
+    </div>
+    <script src="../js/estudianteFinal.js"></script>
+</body>
+</html>
