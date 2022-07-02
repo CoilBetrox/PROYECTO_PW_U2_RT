@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tareas</title>
+    <link rel="stylesheet" href="../css/tareas.css">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="myApp" class="all">
+        <h2>Ingrese una Nueva Tarea </h2>
+
+        <label for="">Tarea</label>
+        <input type="text" v-model="tarea" v-on:keypress.enter="agregaTarea">
+
+        <label for="">Descripción</label>
+        <input type="text" v-model="descrip" v-on:keypress.enter="agregaTarea">
+
+        <br>
+        <button v-on:click="agregaTarea('Top')"> Agregar Inicio </button>
+        <br>
+        <button v-on:click="agregaTarea('Bottom')"> Agregar Fin </button>
+        <h2>Lista de tareas: </h2>
+        <form action="">
+            <table class="tbl">
+                <tr>
+                    <th>N°</th>
+                    <th>Tarea</th>
+                    <th>Descripción</th>
+                </tr>
+                <tr v-for="({tarea, descrip}, index) in lista">
+                    <td>{{index +1}}</td>
+                    <td>{{tarea}}</td>
+                    <td>{{descrip}}</td>
+                </tr>
+            </table>
+        </form>
+
+
+
+    </div>
+    <script src="../js/tareas.js"></script>
+    
+</body>
+</html>

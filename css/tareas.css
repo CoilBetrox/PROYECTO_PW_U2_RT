@@ -1,0 +1,50 @@
+label {
+    display: block;
+}
+
+input {
+    border: 2px solid black;
+    border-radius:  4px;
+}
+
+button {
+    background-color: #555555;
+    color: white;
+    transition-duration: 0.3s;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.all {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.tbl {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 13px 27px;
+}
+
+.tbl th {
+    text-align: left;
+    background-color: #04AA6D;
+    
+}
+
+tr:hover {
+    background-color: #ddd;
+}
